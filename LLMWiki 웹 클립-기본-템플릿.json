@@ -1,0 +1,51 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LLMWiki 웹 클립",
+	"behavior": "create",
+	"noteNameFormat": "{{date}} {{title}}",
+	"path": "90_LLMWiki/raw/notes",
+	"noteContentFormat": "# {{title}}\n\n> **출처**: {{url}}\n> **저자/발행**: {{author}}\n> **유형**: 웹아티클\n\n## 자료 개요\n{{description}}\n\n## 원문 내용\n\n{{content}}\n\n## 인용된 페이지 (역참조용)\n<!-- Claude가 Ingest 시 자동 갱신 -->",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "type",
+			"value": "web-clip",
+			"type": "text"
+		},
+		{
+			"name": "source_url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\", \"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "clipped",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "clipping",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "unprocessed",
+			"type": "text"
+		}
+	],
+	"triggers": []
+}

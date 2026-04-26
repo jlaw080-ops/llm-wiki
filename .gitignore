@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian
+.obsidian/
+
+# Large binaries in raw/ (PDF, DOCX 등)
+raw/**/*.pdf
+raw/**/*.docx
+raw/**/*.doc
+raw/**/*.xlsx
+raw/**/*.xls
+raw/**/*.pptx
+raw/**/*.hwp
+raw/**/*.hwpx
+raw/assets/**
+
+# Temp
+*.tmp
+*.bak
